@@ -1,0 +1,13 @@
+{
+  "name": "runway-agent",
+  "owner": {
+    "name": "Runway Agent contributors"
+  },
+  "plugins": [
+    {
+      "name": "pm-runway",
+      "source": "./pm-runway",
+      "description": "The whole way of working in one plugin: session and shaping skills, Matt Pocock's spec-to-tickets flow as our own versions, and Runway, which runs a chunk's tickets unattended on your own Macs through Orca, reviews each on the other model, and merges to main through a gate only when low risk."
+    }
+  ]
+}

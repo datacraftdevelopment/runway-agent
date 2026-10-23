@@ -13,6 +13,17 @@ holds only what every project uses from day one. Everything else is known but
 not built (the taxonomy below). Agnostic to codebase: the deliverable might be
 FileMaker, web, SaaS or pure consulting.
 
+## Code
+
+`pm-runway/` is the plugin (the root `.claude-plugin/marketplace.json` lists it; dc-dev-plugins lists it too).
+Most of it is vendored: `scripts/sync_vendor.py` rebuilds everything from pm-sp and Matt Pocock's `tdd` and
+`code-review`, and never touches pm-runway's own files (its `OURS` lists). Never hand-edit a vendored file;
+add an `EDITS` entry or make the file ours, and record it in `pm-runway/VENDOR.md`. Runway's code is
+`pm-runway/runway/` (stdlib Python), its contract is `pm-runway/RUNWAY.md`; change both together.
+Bump `pm-runway/.claude-plugin/plugin.json`'s version on any shipped change.
+Tests: `python3 -m unittest discover -s tests` (stdlib only). Setup kit: `SETUP.html`, `SETUP-AGENT.md`,
+`setup/`; keep the two guides in step.
+
 ## Day-one layout
 
 ```
